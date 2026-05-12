@@ -94,7 +94,7 @@ Random move mode is also available in `p1_turn()` (pass `ai=False`) for a much e
 
 ## Dialogue
 
-All prompts and responses are written in **Sicilian dialect**. A few highlights:
+All prompts and responses are written in **Calabrese dialect**. A few highlights:
 
 | Situation | Message |
 |---|---|
