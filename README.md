@@ -108,24 +108,6 @@ All prompts and responses are written in **Calabrese dialect**. A few highlights
 
 ---
 
-## Known Issues
-
-There is a copy-paste bug in `is_win()` — the second anti-diagonal check compares against `self.p2` instead of `self.p1`:
-
-```python
-# Bug — both branches check p2, so p1 can never win via anti-diagonal:
-elif [self.board[0][2], self.board[1][1], self.board[2][0]].count(self.p2) == 3:
-    self.winner = self.p1   # ← assigns p1 but condition checks p2
-
-# Fix:
-elif [self.board[0][2], self.board[1][1], self.board[2][0]].count(self.p1) == 3:
-    self.winner = self.p1
-```
-
-Also, `p2_turn()` and `p1_turn()` use recursion for input retries — deep invalid input chains could hit Python's recursion limit. An iterative loop would be safer.
-
----
-
 ## License
 
 MIT License. See `LICENSE` for details.
