@@ -105,7 +105,7 @@ class Tris:
             self.winner = self.p2
 
             return True
-        elif [self.board[0][2], self.board[1][1], self.board[2][0]].count(self.p2) == 3:
+        elif [self.board[0][2], self.board[1][1], self.board[2][0]].count(self.p1) == 3:
             self.winner = self.p1
 
             return True
